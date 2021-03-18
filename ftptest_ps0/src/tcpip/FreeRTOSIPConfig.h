@@ -337,15 +337,15 @@ extern UBaseType_t uxRand();
 /* Buffer and window sizes used by the FTP and HTTP servers respectively. The
 FTP and HTTP servers both execute in the standard server task. */
 #define ipconfigFTP_TX_BUFSIZE              ( 256 * 1024 )
-#define ipconfigFTP_TX_WINSIZE              ( 12 )
-#define ipconfigFTP_RX_BUFSIZE              ( 256 * 1024 )
+#define ipconfigFTP_TX_WINSIZE              ( 8 )
+#define ipconfigFTP_RX_BUFSIZE              (( 256 * 1024 ) - 1)
 #define ipconfigFTP_RX_WINSIZE              ( 12 )
 #define ipconfigHTTP_TX_BUFSIZE             ( 256 * 1024 )
 #define ipconfigHTTP_TX_WINSIZE             ( 8 )
 #define ipconfigHTTP_RX_BUFSIZE             ( ( 256 * 1024 ) - 1 )
 #define ipconfigHTTP_RX_WINSIZE             ( 12 )
 
-#define ipconfigTCP_FILE_BUFFER_SIZE        ( 8 * 1460 )
+//#define ipconfigTCP_FILE_BUFFER_SIZE        ( 8 * 1460 )
 
 #define portINLINE                          __inline
 
